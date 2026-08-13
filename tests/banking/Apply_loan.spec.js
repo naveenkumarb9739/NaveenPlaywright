@@ -1,0 +1,25 @@
+import { test, expect } from '@playwright/test'
+
+test('verify loan applied', { tag: '@smoke' }, async ({ page }) => {
+    await page.goto('https://qaplayground.com/bank/login')
+    await page.locator('//input[@data-testid="login-username-input"]').fill('standard_user')
+    await page.locator('//input[@data-testid="login-password-input"]').fill('bank_sauce')
+    await page.locator('//button[@type="submit"]').click()
+    await page.locator('//span[text()="Apply Loan"]').click()
+    await page.locator('//button[text()="Apply for Loan"]').click()
+    await page.locator('//span[text()="Select loan type"]').click()
+    await page.locator('//div[text()="Home"]').click()
+    await page.locator('#loan-amount').fill('50000')
+    await page.locator('#loan-term-trigger').click()
+    await page.locator('//div[text()="24"]').click()
+    await page.locator('#loan-interest-rate').fill('10')
+    await page.locator('#loan-account-trigger').click()
+    await page.locator('//div[text()="Everyday Checking"]').click()
+    await page.locator('//textarea[@data-slot="textarea"]').fill('for construction needs')
+    await page.locator('//button[@data-testid="review-loan-btn"]').click()
+    await page.locator('//button[@data-testid="confirm-loan-btn"]').click()
+
+    await page.locator('//a[@data-testid="back-to-dashboard-btn"]').click()
+    await expect(page.locator('//h1[text()="Apply for a Loan"]')).toBeVisible()
+    console.log('loan created successful')
+})
