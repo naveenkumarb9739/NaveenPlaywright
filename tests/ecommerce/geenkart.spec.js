@@ -6,12 +6,9 @@ test('test', async ({ page }) => {
   await page.locator('//img[@alt="Cart"]').click();
   await page.locator('//button[text()="PROCEED TO CHECKOUT"]').click();
   await page.locator('//button[text()="Place Order"]').click();
-    await page.getByRole('combobox').selectOption('India');
-      // await page.getByRole('checkbox').check();
-      
+  await page.getByRole('combobox').selectOption('India');
   await page.locator('input[type="checkbox"]').check();
-      await page.locator('//button[text()="Proceed"]').click()
-      
+  await page.locator('//button[text()="Proceed"]').click()
 
-  // await expect(page.locator('input[type="checkbox"]')).toBeChecked();
+
 });

@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('verify add to cart', async ({ page }) => {
 await page.goto('https://automationexercise.com/')
+// await page.locator('//div[text()="Close"]').click()
 await page.locator('//a[text()=" Signup / Login"]').click()
 await page.locator('input[data-qa="login-email"]').fill('testingqa1@gmail.com')
 await page.locator('input[data-qa="login-password"]').fill('QAteam@*973912#')
