@@ -11,7 +11,6 @@ test('verify punch', async ({ page }) => {
   await page.locator('input[placeholder="hh:mm"]').fill('01:13 PM')
   await page.locator('textarea[placeholder="Type here"]').fill('Punch In')
   await page.locator('button[type="submit"]').click()
-
   await page.locator('textarea[placeholder="Type here"]').fill('exit')
   await page.locator('button[type="submit"]').click()
 
