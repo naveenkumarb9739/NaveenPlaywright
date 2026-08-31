@@ -7,7 +7,12 @@ await page.locator('//a[text()=" Signup / Login"]').click()
 await page.locator('input[data-qa="login-email"]').fill('testingqa1@gmail.com')
 await page.locator('input[data-qa="login-password"]').fill('QAteam@*973912#')
 await page.locator('button[data-qa="login-button"]').click()
-await page.locator('(//a[text()="Add to cart"])[1]').click()
+await page.locator('a[href="#Women"]').click()
+await page.locator('a[href="/category_products/7"]').click()
+// await page.getByRole('link', { name: ' Add to cart' }).nth(2).click();
+
+
+await page.locator('(//a[text()="Add to cart"])[1]').click() 
 await page.locator('(//a[@href="/view_cart"])[2]').click()
 await page.waitForTimeout(2000);
 await page.locator('//img[@src="get_product_picture/1"]').isVisible()
