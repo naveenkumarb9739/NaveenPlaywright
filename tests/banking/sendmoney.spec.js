@@ -2,8 +2,8 @@
 import { test, expect } from "@playwright/test"
 test('verify amount sent success', async ({ page }) => {
     await page.goto("https://qaplayground.com/bank/login")
-    await page.locator('//input[@data-testid="login-username-input"]').fill('standard_user')
-    await page.locator('//input[@data-testid="login-password-input"]').fill('bank_sauce')
+    await page.locator('//input[@data-testid="login-username-input"]').fill(process.env.BANKING_USERNAME)
+    await page.locator('//input[@data-testid="login-password-input"]').fill(process.env.BANKING_PASSWORD)
     await page.locator('//button[@type="submit"]').click()
     //send money
     await page.locator('//a[@data-testid="quick-action-send-money"]').click()

@@ -1,0 +1,36 @@
+{
+  "employee": {
+    "firstName": "Maya",
+    "lastName": "Patel"
+  },
+  "punch": {
+    "in": {
+      "time": "09:00 AM",
+      "note": "Started work"
+    },
+    "out": {
+      "time": "06:00 PM",
+      "note": "Finished work"
+    }
+  },
+  "employeeStatus": {
+    "name": "Contractor"
+  },
+  "candidate": {
+    "firstName": "Anika",
+    "lastName": "Sharma",
+    "email": "anika.sharma@example.com"
+  },
+  "jobTitle": {
+    "name": "QA Engineer",
+    "description": "Quality assurance automation engineer",
+    "note": "Available for full time work"
+  },
+  "buzz": {
+    "message": "Completed the daily quality checks"
+  },
+  "legacyEmployee": {
+    "firstName": "Ravi",
+    "lastName": "Kumar"
+  }
+}

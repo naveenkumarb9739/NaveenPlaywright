@@ -119,12 +119,15 @@ test('verify multiple products added and checkout', async ({ page }) => {
   await page.locator('[data-test="postal_code"]').fill('560100');
 
   await page.locator('#house_number').fill('100');
+  await page.getByRole('textbox', { name: 'Street' }).fill('123 Main Street');
+  await page.getByRole('textbox', { name: 'City' }).fill('Bengaluru');
+  await page.getByRole('textbox', { name: 'State' }).fill('Karnataka');
 
   // 10. Proceed to payment
   const proceedToPayment = page.locator('button[data-test="proceed-3"]');
-  await expect(page.getByRole('textbox', { name: 'Street' })).not.toHaveValue('');
-  await expect(page.getByRole('textbox', { name: 'City' })).not.toHaveValue('');
-  await expect(page.getByRole('textbox', { name: 'State' })).not.toHaveValue('');
+  await expect(page.getByRole('textbox', { name: 'Street' })).toHaveValue('123 Main Street');
+  await expect(page.getByRole('textbox', { name: 'City' })).toHaveValue('Bengaluru');
+  await expect(page.getByRole('textbox', { name: 'State' })).toHaveValue('Karnataka');
   await expect(proceedToPayment).toBeEnabled();
   await proceedToPayment.click();
 

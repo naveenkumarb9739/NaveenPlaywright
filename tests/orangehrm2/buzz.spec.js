@@ -7,6 +7,6 @@ test('verify buzz message success', async ({ page }) => {
     const buzzPage = new buzz(page);
 
     await login.navigate();
-    await login.login('Admin', 'admin123');
+    await login.login(process.env.ORANGEHRM_USERNAME, process.env.ORANGEHRM_PASSWORD);
     await buzzPage.buzz('hi good morning');
 });

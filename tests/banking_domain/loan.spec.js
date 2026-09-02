@@ -12,7 +12,7 @@ test('verify loan applied', async ({ page }) => {
 
     await login.navigate();
 
-    await login.login('standard_user', 'bank_sauce');
+    await login.login(process.env.BANKING_USERNAME, process.env.BANKING_PASSWORD);
 
     await loan.applyLoan(
         '50000',

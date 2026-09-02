@@ -9,21 +9,21 @@ class punch {
         this.submitButton = page.locator('button[type="submit"]')
     }
 
-    async punchIn() {
+    async punchIn(time, note) {
         await this.time.click()
         await this.attendance.click()
         await this.punchInMenu.click()
-        await this.timeInput.fill('01:13 PM')
-        await this.noteInput.fill('Punch In')
+        await this.timeInput.fill(time)
+        await this.noteInput.fill(note)
         await this.submitButton.click()
     }
 
-    async punchOut() {
+    async punchOut(time, note) {
         await this.time.click()
         await this.attendance.click()
         await this.punchInMenu.click()
-        await this.timeInput.fill('08:00 PM')
-        await this.noteInput.fill('exit')
+        await this.timeInput.fill(time)
+        await this.noteInput.fill(note)
         await this.submitButton.click()
     }
 }

@@ -7,7 +7,7 @@ test('verify money sent', async ({ page }) => {
     const moneyTransfer = new MoneySentPage(page);
 
     await login.navigate();
-    await login.login('standard_user', 'bank_sauce');
+    await login.login(process.env.BANKING_USERNAME, process.env.BANKING_PASSWORD);
 
     await moneyTransfer.money_sent('580', 'college semester fee');
 

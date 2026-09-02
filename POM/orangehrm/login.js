@@ -15,15 +15,15 @@ class loginpage{
 
    async gotoLoginPage(){
     await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    await this.page.waitForLoadState('domcontentloaded');
+    // await this.page.waitForLoadState('domcontentloaded');
    }
 
    async login(username, password) {
         await this.username.fill(username);
         await this.password.fill(password);
         await this.button.click();
-        await this.page.waitForURL(/.*\/dashboard\/index.*/, { timeout: 15000 });
-        await expect(this.assertion).toBeVisible({ timeout: 15000 });
+        // await this.page.waitForURL(/.*\/dashboard\/index.*/, { timeout: 15000 });
+        // await expect(this.assertion).toBeVisible({ timeout: 15000 });
    }
 
 

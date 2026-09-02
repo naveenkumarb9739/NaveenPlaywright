@@ -1,0 +1,9 @@
+{
+  "billPayment": {
+    "amount": "100"
+  },
+  "accountCreation": {
+    "name": "latha5",
+    "initialDeposit": 50000
+  }
+}
