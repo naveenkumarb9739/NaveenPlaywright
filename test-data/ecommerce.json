@@ -15,11 +15,11 @@
     "houseNumber": "100",
     "payment": {
       "paymentMethod": "Credit Card",
+      "nameOnCard": "Maya Patel" ,
       "cardNumber": "4111-1111-1111-1111",
       "cvv": "852",
       "expiryMonth": "12",
-      "expiryYear": "2028",
-      "nameOnCard": "Maya Patel"
+      "expiryYear": "2028"
     }
   },
   "greenKart": {

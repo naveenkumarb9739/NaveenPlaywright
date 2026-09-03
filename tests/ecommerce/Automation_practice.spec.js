@@ -1,8 +1,11 @@
 import { test, expect } from '@playwright/test';
+import 'dotenv/config';
+
 const testData = require('../../test-data/ecommerce.json')
 
 test('verify add to cart', async ({ page }) => {
-await page.goto('https://automationexercise.com/')
+await page.goto('https://automationexercise.com/')  
+
 // await page.locator('//div[text()="Close"]').click()
 await page.locator('//a[text()=" Signup / Login"]').click()
 await page.locator('input[data-qa="login-email"]').fill(process.env.AUTOMATION_EXERCISE_USERNAME)
@@ -18,7 +21,7 @@ await page.locator('(//a[@href="/view_cart"])[2]').click()
 await page.waitForTimeout(2000);
 await page.locator('//img[@src="get_product_picture/1"]').isVisible()
 await page.locator('a[class="btn btn-default check_out"]').click()
-// await page.locator('a[class="btn btn-default check_out"]').click()
+await page.locator('a[href="/payment"]').click()
 await page.locator('input[data-qa="name-on-card"]').fill(testData.automationExercise.payment.nameOnCard)
 await page.locator('input[data-qa="card-number"]').fill(testData.automationExercise.payment.cardNumber)
 await page.locator('input[data-qa="cvc"]').fill(testData.automationExercise.payment.cvc)

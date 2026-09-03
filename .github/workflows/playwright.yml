@@ -1,16 +1,10 @@
 name: Playwright Tests
 
 on:
-  push:
-    branches: [ main, master, practice ]
-
-  pull_request:
-    branches: [ main, master, practice ]
-
   # Runs every day at 09:00 AM IST
   schedule:
-    - cron: '0 9 * * *'
-      timezone: 'Asia/Kolkata'
+    # GitHub Actions schedules use UTC. 03:30 UTC = 09:00 AM IST.
+    - cron: '30 3 * * *'
 
   # Allows manual execution
   workflow_dispatch:
