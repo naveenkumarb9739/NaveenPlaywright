@@ -1,0 +1,12 @@
+{
+  "country": "India",
+  "title": "Ms.",
+  "firstName": "test",
+  "lastName": "QA",
+  "dateOfBirth": "2002-10-26",
+  "dateOfJoining": "22/05/2022",
+  "email": "testqa@gmail.com",
+  "phoneCode": "+91",
+  "phoneNumber": "7854696485",
+  "communicationPhone": true
+}

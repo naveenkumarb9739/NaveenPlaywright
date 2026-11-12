@@ -1,0 +1,20 @@
+{
+  "search": {
+    "from": "New York",
+    "to": "Tokyo",
+    "departureDate": "2027-10-10",
+    "passengers": 1,
+    "flightClass": "Business",
+    "oneWay": true
+  },
+  "passenger": {
+    "name": "Taylor Morgan",
+    "email": "taylor.morgan@example.com",
+    "phone": "5551234567"
+  },
+  "payment": {
+    "cardNumber": "4111111111111111",
+    "expiry": "12/30",
+    "cvv": "123"
+  }
+}
